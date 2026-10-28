@@ -1,0 +1,25 @@
+[project]
+name = "agent-tool-audit"
+version = "0.1.0"
+description = "Tool-execution-level security audit for AI agents (indirect prompt injection -> tool call / exfiltration)"
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0",
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+langchain = ["langchain-core>=0.3"]
+smtp = ["aiosmtpd>=1.4"]
+dev = ["pytest>=8.0", "pytest-cov"]
+
+[project.scripts]
+ata = "ata.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
