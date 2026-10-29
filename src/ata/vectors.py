@@ -1,4 +1,7 @@
+import json
 from dataclasses import dataclass
+from pathlib import Path
+from typing import List
 
 
 @dataclass
@@ -14,6 +17,7 @@ class Vector:
     payload: str
     goal: str
     success_criterion: SuccessCriterion
+    scenario: str = "document_summary"
 
     @classmethod
     def from_dict(cls, data: dict) -> "Vector":
@@ -27,12 +31,8 @@ class Vector:
                 attempt=crit.get("attempt", ""),
                 confirmed=crit.get("confirmed", ""),
             ),
+            scenario=data.get("scenario", "document_summary"),
         )
-
-
-import json
-from pathlib import Path
-from typing import List
 
 
 def load_vectors(path: str) -> List[Vector]:
