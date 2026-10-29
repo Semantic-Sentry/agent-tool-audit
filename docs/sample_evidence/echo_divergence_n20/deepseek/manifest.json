@@ -1,0 +1,8 @@
+{
+  "chain_file": "chain.jsonl",
+  "final_chain_hash": "90284a7b73b3f564bfc6b03b1b2b5f47d240e89870c130cd2b19edc963a717a0",
+  "note": "REDACTED COPY -- hashes recomputed after canary redaction, will NOT match original run's manifest_hash. See README.md in this directory.",
+  "run_id": "audit-1793255279",
+  "sealed_at": 1793255400.2646117,
+  "total_events": 22
+}
