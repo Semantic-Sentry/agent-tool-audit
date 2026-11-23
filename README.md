@@ -21,6 +21,26 @@ between two models on the identical agent and vector:
 Non-overlapping 95% confidence intervals. Same agent, same prompt, same
 vector — only the model changed.
 
+## Pilot: AI Agent Security Audit
+
+A fixed-scope, 3-day pilot for teams shipping tool-using AI agents.
+
+**Price:** $375
+
+**What you get:**
+
+- A reproducible attack harness run against your agent (your repo or a
+  local build only, never production)
+- Leak-rate and tool-execution metrics, graded
+  `NONE → ATTEMPT → UNBLOCKED → CONFIRMED`
+- Hardening fixes for what the harness finds
+- If nothing is found: a clean verification report
+
+**Scope:** indirect prompt injection, secret leakage, over-permissioned
+tools.
+
+**Contact:** open an issue in this repository.
+
 ## What this is
 
 - A security audit harness for AI agents with tool access (think: a
